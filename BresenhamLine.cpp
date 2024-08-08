@@ -4,8 +4,9 @@
 int startx, starty, endx, endy;
 
 void init(){
-	glClear(GL_COLOR_BUFFER_BIT);
 	glClearColor(0, 0, 0, 1);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(1, 1, 1);
 	glMatrixMode(GL_PROJECTION);
 	gluOrtho2D(0, 500, 0, 500);
 }
@@ -38,7 +39,6 @@ void bresenhamLine(int xi, int yi, int xend, int yend){
 }
 
 void display(){
-	glColor3f(1, 1, 1);
 	bresenhamLine(startx, starty, endx, endy);
 	glFlush();
 }
